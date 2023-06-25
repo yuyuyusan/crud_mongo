@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .c-container {
+    @apply max-w-3xl mx-auto my-24;
+  }
+  .c-title-01 {
+    @apply text-center text-3xl font-bold mb-10;
+  }
+  .c-title-02 {
+    @apply text-xl mb-4;
+  }
+  .c-button {
+    @apply bg-slate-300 py-2 px-4;
+  }
+  .c-link {
+    @apply bg-slate-700 text-white py-2 px-4 block mb-4 w-32 text-center;
+  }
+  .c-input {
+    @apply border border-slate-300 rounded-md py-2 px-4;
+  }
+}

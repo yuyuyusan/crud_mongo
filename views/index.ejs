@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="public/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="c-container">
+    <h1 class="c-title-01">トップ</h1>
+    <h2 class="c-title-02">
+      登録してください
+    </h2>
+    <form action="/api/users" method="POST">
+      <div class="mb-4">
+        <input class="c-input" type="text" name="name" placeholder="名前">
+      </div>
+      <button class="c-button" type="submit">
+        登録
+      </button>
+    </form>
+    <a class="c-link" href="/users/">一覧へ</a>
+  </div>
+</body>
+
+</html>
