@@ -4,11 +4,12 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const path = require('path');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const PORT = 3000;
 
 // MongoDBへの接続
-mongoose.connect('mongodb+srv://youzhiqichuan:SlZLuUlO3pmAXxL9@cluster0.mfqyni1.mongodb.net/mydatabase?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
