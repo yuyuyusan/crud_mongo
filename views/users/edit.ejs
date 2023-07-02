@@ -6,25 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="../public/style.css" rel="stylesheet" />
+  <link href="../../public/style.css" rel="stylesheet" />
 </head>
 
 <body>
   <div class="c-container">
-    <h1 class="c-title-01">編集する</h1>
+    <h1 class="c-title-01"><%= user.name %>さんのページを編集する</h1>
     <p class="mb-5 text-xl">
-      コメントID: <%= user.id %><br>
+      ID：<%= user.id %>
     </p>
     <p class="mb-5 text-xl">
-      コメント: <%= user.name %><br>
+      ユーザー名：<%= user.name %>さん
     </p>
-    <a class="c-link" href="/users">一覧へ</a>
-    <a class="c-link" href="/users/<%= user.id %>/edit">編集</a>
+    <a class="c-link" href="/users">一覧ページへ</a>
     <form class="mb-5" action="/api/users/<%= user.id %>/edit/?_method=PATCH" method="POST">
-      <label for="name">ユーザー名の変更</label>
-      <input type="text" name="name" placeholder="名前">
+      <div class="mb-20">
+        <label for="name" class="block name mb-2">ユーザー名の変更</label>
+        <input class="c-input" type="text" name="name" placeholder="名前">
+      </div>
       <button class="c-button" type="submit">
-        変更
+        変更する
       </button>
     </form>
   </div>

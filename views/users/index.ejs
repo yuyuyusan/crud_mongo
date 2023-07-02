@@ -11,18 +11,18 @@
 
 <body>
   <div class="c-container">
-    <h1 class="c-title-01">リスト</h1>
-    <ul>
+    <h1 class="c-title-01">一覧ページ</h1>
+    <ul class="mb-20">
       <% for (let u of users) { %>
-        <li>
-          <h2>
+        <li class="mb-10 last:mb-0">
+          <h2 class="c-title-02">
             <%= u.name %>
           </h2>
-          <a class="c-link" href="/users/<%= u.id %>">詳細</a>
+          <a class="c-link" href="/users/<%= u.id %>">詳細ページへ</a>
         </li>
         <% } %>
     </ul>
-    <a class="c-link" href="/">TOP</a>
+    <a class="c-link mx-auto" href="/">TOP</a>
   </div>
 </body>
 

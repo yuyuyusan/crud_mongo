@@ -11,19 +11,21 @@
 
 <body>
   <div class="c-container">
-    <h1 class="c-title-01">show</h1>
+    <h1 class="c-title-01">詳細ページ</h1>
     <p class="mb-5 text-xl">
-      コメントID：<%= user.id %><br>
+      ID：<%= user.id %>
     </p>
     <p class="mb-5 text-xl">
       ユーザー名：<%= user.name %>
     </p>
-    <a class="c-link" href="/users">一覧へ</a>
-    <a class="c-link" href="/">TOP</a>
-    <a class="c-link" href="/users/<%= user.id %>/edit">編集</a>
-    <form action="/api/users/<%= user.id %>?_method=DELETE" method="POST">
+    <div class="mb-20">
+      <a class="c-link" href="/users">一覧ページへ</a>
+      <a class="c-link" href="/users/<%= user.id %>/edit">編集画面へ</a>
+    </div>
+    <a class="c-link mx-auto" href="/">TOP</a>
+    <form action="/api/users/<%= user.id %>?_method=DELETE" class="text-center" method="POST">
       <button class="c-button" type="submit">
-        削除
+        削除する
       </button>
     </form>
   </div>
